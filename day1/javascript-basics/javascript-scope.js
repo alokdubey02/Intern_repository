@@ -1,0 +1,1 @@
+// scope means variable access
