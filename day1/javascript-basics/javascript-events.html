@@ -1,0 +1,85 @@
+<!-- events -->
+<!-- events in javascript are actions or occurrences that happen in the browser. -->
+<!-- eg. user interactions like clicks,key presses, mouse movements, page load -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Events</title>
+  </head>
+  <body>
+    <!-- click event -->
+    <!-- onClick : fired when you click -->
+    <button onclick="handleClick()">Click me</button>
+
+    <!-- Mouseover Event -->
+    <!-- onmouseover: fired when the mouse pointer enters an element -->
+    <div onmouseover="handleMouseOver()">Hover me</div>
+
+    <!-- Mouseout event -->
+    <!-- onmouseout: fired when the mouse pointer leaves an element -->
+    <div onmouseout="handleMouseOut()">Hover me</div>
+
+    <!-- Keydown event -->
+    <!-- onkeydown: fired when a key on the keyboard is pressed -->
+    <input type="text" onkeydown="handleKeyDown()" />
+
+    <!--  Keyup Event-->
+    <!-- onkeyup: fired when a key on the keyboard is released -->
+    <input type="text" onkeyup="handleKeyUp()" />
+
+    <!-- Change event -->
+    <!-- onchange: fired when the valuse of an input element changes -->
+    <input type="text" onchange="handleChange()" />
+
+    <!-- Submit event -->
+    <!-- onsubmit: fired when a form is submitted -->
+    <form onsubmit="handleSubmit()">
+      <input type="text" name="username" required />
+      <input type="submit" value="Submit" />
+    </form>
+
+    <!-- Load event -->
+    <!-- onload: fired when a resource and its dependent resources (like images) have finished loading.-->
+    <img src="image.jpg" onload="handleImageLoad()" />
+
+    <script>
+      function handleClick() {
+        alert("Button clicked!");
+      }
+      function handleMouseOver() {
+        console.log("Mouse over the div");
+      }
+      function handleMouseOut() {
+        console.log("Mouse out of the div");
+      }
+      function handleKeyDown() {
+        console.log("Key down");
+      }
+      function handleKeyUp() {
+        console.log("Key up");
+      }
+      function handleChange() {
+        console.log("Value changed");
+      }
+      function handleSubmit() {
+        alert("Form submitted!");
+      }
+      function handleImageLoad() {
+        console.log("Image loaded");
+      }
+      //Fired when the initial HTML document has been completely loaded and parsed, without waiting for stylesheets, images, and subframes to finish loading.
+      document.addEventListener("DOMContentLoaded", function () {
+        console.log("DOM content loaded");
+      });
+      //
+      //   Fired when the browser window is resized
+      window.addEventListener("resize", function () {
+        console.log("Window resized");
+      });
+    </script>
+  </body>
+</html>

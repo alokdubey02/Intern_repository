@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dom-Manipulation</title>
+  </head>
+  <body>
+    <div id="myDiv">Hello, World!</div>
+    <!-- DOM(Document Object Model) is a programming  interface for web documents. 
+it repersents the document as a tree of objects where each object corresponds to a part of the document -->
+    <script>
+      // Changing existing element content
+      document.getElementById("myDiv").innerHTML = "New content!";
+
+      //  dynamically creating and append a new (p) paragraph
+      const newElement = document.createElement("p");
+      newElement.textContent = "This is a new paragraph.";
+      document.body.appendChild(newElement);
+    </script>
+  </body>
+</html>
